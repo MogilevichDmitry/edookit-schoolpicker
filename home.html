@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>index</title>
+  <link rel="stylesheet/less" href="styles/style.less">
+  <link rel="stylesheet/less" href="styles/home.less">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<div class="home">
+  <div class="header">
+    <div class="main">
+      <div class="header-wrapper">
+        <a href="#" class="header__logo logo">
+          <span>edookit schoolpicker</span>
+        </a>
+        <h1 class="heading">schoolpicker</h1>
+        <div class="header__profile">
+          <a class="profile__link link_green link_underline" href="#">Sign up</a>
+          <a class="profile__link link_btn-blue" href="#">Login</a>
+        </div>
+      </div>
+    </div>
+  </div><!--header-->
+  <div class="home__content">
+    <div class="main">
+      <h1 class="heading">schoolpicker</h1>
+      <h2 class="second-heading">
+        Ziskejte prehled o nejlepsich skolach behem par kliku
+      </h2>
+      <div class="home__search">
+        <form class="search__form home__search-form">
+          <ul class="tags-list">
+            <li class="tags-list__item">
+              Brno
+              <a class="list-item__close-btn close-btn"></a>
+            </li>
+            <!--<li class="tags-list__item">
+                stredni skola
+                <a class="list-item__close-btn close-btn"></a>
+            </li>
+            <li class="tags-list__item">
+                anglicky
+                <a class="list-item__close-btn close-btn"></a>
+            </li>-->
+          </ul>
+          <input class="search__input" type="text"/>
+          <input class="search__btn" id="search-button" type="submit" value="search"/>
+          <label class="search__btn-label" for="search-button"></label>
+        </form>
+      </div>
+      <div class="box home__box">
+        <div class="school__params">
+          <div class="school__param">
+            <h3 class="params__heading">Typ skoly</h3>
+            <ul class="params__list">
+              <li class="params__item">
+                <a class="params__link" href="#">stredni skola</a>
+              </li>
+              <li class="params__item">
+                <a class="params__link" href="#">zakladni skola</a>
+              </li>
+              <li class="params__item">
+                <a class="params__link" href="#">materska skola</a>
+              </li>
+              <li class="params__item">
+                <a class="params__link" href="#">gymnazium</a>
+              </li>
+              <li class="params__item">
+                <a class="params__link" href="#">soukromna skola</a>
+              </li>
+            </ul>
+          </div>
+          <div class="school__param">
+            <h3 class="params__heading">Sposub vyuky</h3>
+            <ul class="params__list">
+              <li class="params__item">
+                <a class="params__link" href="#">standart</a>
+              </li>
+              <li class="params__item">
+                <a class="params__link" href="#">montessori</a>
+              </li>
+              <li class="params__item">
+                <a class="params__link" href="#">waldorf</a>
+              </li>
+            </ul>
+          </div>
+          <div class="school__param">
+            <h3 class="params__heading">Velikost skoly</h3>
+            <ul class="params__list list_no-border">
+              <li class="params__item">
+                <a class="params__link" href="#">mensi nez 100 zaku</a>
+              </li>
+              <li class="params__item">
+                <a class="params__link" href="#">100 - 500 zaku</a>
+              </li>
+              <li class="params__item">
+                <a class="params__link" href="#">500 - 1500 zaku</a>
+              </li>
+              <li class="params__item">
+                <a class="params__link" href="#">vetsi nez 1500 zaku</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><!--main-->
+  </div><!--home__content-->
+</div><!--home-->
+</body>
+<script src="js/less.js"></script>
+</html>

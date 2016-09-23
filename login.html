@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>index</title>
+  <link rel="stylesheet/less" href="styles/style.less">
+  <link rel="stylesheet/less" href="styles/login.less">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<div class="login">
+  <div class="login__box">
+    <h1 class="logo login__logo">edookit schoolpicker</h1>
+    <div>
+      <form role="form">
+        <div class="form__field field-email">
+          <input
+            class="form__input"
+            type="text"
+            placeholder="E-mail"
+            id="input-email"
+          />
+          <label
+            class="form__label form__label-email"
+            for="input-email"
+          ></label>
+        </div>
+        <div class="form__field field-password">
+          <input
+            class="form__input"
+            type="password"
+            placeholder="Password"
+            id="input-password"
+          />
+          <label
+            class="form__label form__label-password"
+            for="input-password"
+          ></label>
+        </div>
+        <div class="form__field field-checkbox">
+          <input class="form__checkbox" type="checkbox" id="remember-password"/>
+          <label class="form__label-checkbox" for="remember-password">
+            Remember password
+          </label>
+        </div>
+        <input class="form__btn login-btn" type="submit" value="Login"/>
+      </form>
+    </div>
+    <div class="login__link-field">
+      <a class="login__link link_blue" href="#">Forgot password</a>
+    </div>
+    <div class="login__link-field">
+      <a class="login__link link_green link_underline link_semibold" href="#">
+        Sign Up
+      </a>
+    </div>
+    <div>
+      <div class="social-api__heading">Sign in with:</div>
+      <div class="social-api">
+        <div class="social-api__item">
+          <a class="social-api__link" href="">Google</a>
+        </div>
+        <div class="social-api__item">
+          <a class="social-api__link" href="">Microsoft</a>
+        </div>
+        <div class="social-api__item">
+          <a class="social-api__link" href="">Dropbox</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="app-badges">
+    <a href="#" class="app-badge">
+      <div class="app-badge__icon app-badge__icon-google"></div>
+      <div class="app-badge__description">
+        <div class="app-badge__hint">GET IT ON</div>
+        <div class="app-badge__service">Google Play</div>
+      </div>
+    </a>
+    <a href="#" class="app-badge">
+      <div class="app-badge__icon app-badge__icon-apple"></div>
+      <div class="app-badge__description">
+        <div class="app-badge__hint">Download on the</div>
+        <div class="app-badge__service">App Store</div>
+      </div>
+    </a>
+    <a href="#" class="app-badge">
+      <div class="app-badge__icon app-badge__icon-microsoft"></div>
+      <div class="app-badge__description">
+        <div class="app-badge__hint">Get it from</div>
+        <div class="app-badge__service">Microsoft</div>
+      </div>
+    </a>
+  </div>
+</div>
+</body>
+<script src="js/less.js"></script>
+</html>

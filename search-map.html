@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>index</title>
+  <link rel="stylesheet/less" href="styles/style.less">
+  <link rel="stylesheet/less" href="styles/search-map.less">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+<div class="wrapper">
+  <div class="header search-map__header">
+    <div class="main">
+      <div class="header-wrapper">
+        <a href="#" class="header__logo logo">
+          <span>edookit schoolpicker</span>
+        </a>
+        <div class="header__profile">
+          <a class="profile__link link_green link_underline" href="#">Sign up</a>
+          <a class="profile__link link_btn-blue" href="#">Login</a>
+        </div>
+        <form class="search__form">
+          <ul class="tags-list">
+            <li class="tags-list__item">
+              Brno
+              <a class="list-item__close-btn close-btn"></a>
+            </li>
+            <!--<li class="tags-list__item">
+                stredni skola
+                <a class="list-item__close-btn close-btn"></a>
+            </li>
+            <li class="tags-list__item">
+                anglicky
+                <a class="list-item__close-btn close-btn"></a>
+            </li>-->
+          </ul>
+          <input class="search__input" type="text"/>
+          <input class="search__btn" id="search-button" type="submit" value="search"/>
+          <label class="search__btn-label" for="search-button"></label>
+        </form>
+      </div>
+    </div>
+  </div><!--header-->
+  <div class="content">
+    <div class="main">
+      <div
+        class="content__search-map"
+        id="content__search-map"
+      >
+        <div>
+          <div class="search-school-box">
+            <div class="search-school">
+              <div class="search-school__top-bar">
+                <div class="search-school__selects">
+                  <div class="search-school__select">
+                    <select>
+                      <option value="" disabled selected>Typ skoly</option>
+                      <option>option 1</option>
+                      <option>option 2</option>
+                    </select>
+                  </div>
+                  <div class="search-school__select">
+                    <select>
+                      <option value="" disabled selected>Sposob vyuky</option>
+                      <option>option 1</option>
+                      <option>option 2</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="search-school__top-bar-aside">
+                  <div class="search-school__location">
+                    <input class="search-school__location-input"
+                           id="search-school__input"
+                           type="text" placeholder="Lokace">
+                    <label class="search-school__location-label"
+                           for="search-school__input">
+                    </label>
+                  </div>
+                  <div class="view-selector">
+                    <button class="view-selector__item view-selector__item_active">
+                      <div class="list-icon"></div>
+                      <span>list</span>
+                    </button>
+                    <button class="view-selector__item">
+                      <div class="grid-icon"></div>
+                      <span>grid</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="search-school__bottom-bar">
+                <div class="search-school__size">
+                  <div class="search-school__size-heading">Max velikost skoly</div>
+                  <input class="search-school__size-input" type="range">
+                  <div class="search-school__size-value">
+                    <div class="search-school__size-ranged">451 zaku</div>
+                    <div>5000+ zaku</div>
+                  </div>
+                </div>
+                <a class="search-school__advanced">
+                  <span>Pokrocile vyhledavani</span>
+                  <div class="advanced-btn_icon arrow-down_blue"></div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="schools">
+            <div class="school">
+              <div class="school__main">
+                <div class="school__img">
+                  <img src="https://placeimg.com/81/81/arch" alt="school img">
+                </div>
+                <div class="school__description">
+                  <div class="school__heading">
+                    <span class="school__title">ScioSkola - zakladni skola s.r.ozakladni skola s.r.ozakladni skola s.r.ozakladni skola s.r.ozakladni skola s.r.o</span>
+                    <div class="school__owl-icon owl-icon"></div>
+                  </div>
+                  <div class="school__info">
+                    <div class="school__kind">
+                      Zakladni skola
+                    </div>
+                    <div class="school__type">
+                      Statni skola
+                    </div>
+                  </div>
+                  <div class="school__about">Podporujeme demokratcke prostredi,
+                    kladeni otazek a odpovedi. Rozvijime umeni prezentovat sve znalosti
+                    i schopnost naslouchat drunym, diskutovat. Ucivo mame dle individualnich
+                    schopnosti a dovedosti zaku
+                  </div>
+                </div>
+              </div>
+              <div class="school__status">
+                <div class="school__info">
+                  <div class="school__kind">
+                    Zakladni skola
+                  </div>
+                  <div class="school__location">
+                    <div class="location-icon"></div>
+                    <span class="school__location-name">Olomouc</span>
+                  </div>
+                  <div class="school__type">
+                    Statni skola
+                  </div>
+                </div>
+                <div class="like-status">
+                  <input type='checkbox'
+                         value='valuable'
+                         id="likebox-1"
+                  />
+                  <label for="likebox-1"></label>
+                  <span class="like-status__count">354</span>
+                </div>
+              </div>
+            </div>
+            <div class="school">
+              <div class="school__main">
+                <div class="school__img">
+                  <img src="https://placeimg.com/83/83/arch" alt="school img">
+                </div>
+                <div class="school__description">
+                  <div class="school__heading">
+                    <span class="school__title">ScioSkola - zakladni skola s.r.o</span>
+                  </div>
+                  <div class="school__info">
+                    <div class="school__kind">
+                      Zakladni skola
+                    </div>
+                    <div class="school__type">
+                      Statni skola
+                    </div>
+                  </div>
+                  <div class="school__about">Podporujeme demokratcke prostredi,
+                    kladeni otazek a odpovedi. Rozvijime umeni prezentovat sve znalosti
+                    i schopnost naslouchat drunym, diskutovat. Ucivo mame dle individualnich
+                    schopnosti a dovedosti zaku
+                  </div>
+                </div>
+              </div>
+              <div class="school__status">
+                <div class="school__info">
+                  <div class="school__kind">
+                    Zakladni skola a materski skola
+                  </div>
+                  <div class="school__location">
+                    <div class="location-icon"></div>
+                    <span class="school__location-name">Brno</span>
+                  </div>
+                  <div class="school__type">
+                    Statni skola
+                  </div>
+                </div>
+                <div class="like-status">
+                  <input type='checkbox'
+                         value='valuable'
+                         id="likebox-2"
+                  />
+                  <label for="likebox-2"></label>
+                  <span class="like-status__count">0</span>
+                </div>
+              </div>
+            </div>
+            <div class="school">
+              <div class="school__main">
+                <div class="school__img">
+                  <img src="https://placeimg.com/97/97/arch" alt="school img">
+                </div>
+                <div class="school__description">
+                  <div class="school__heading">
+                    <span class="school__title">ScioSkola - zakladni skola s.r.o</span>
+                  </div>
+                  <div class="school__info">
+                    <div class="school__kind">
+                      Zakladni skola
+                    </div>
+                    <div class="school__type">
+                      Statni skola
+                    </div>
+                  </div>
+                  <div class="school__about">Podporujeme demokratcke prostredi,
+                    kladeni otazek a odpovedi. Rozvijime umeni prezentovat sve znalosti
+                    i schopnost naslouchat drunym, diskutovat. Ucivo mame dle individualnich
+                    schopnosti a dovedosti zaku
+                  </div>
+                </div>
+              </div>
+              <div class="school__status">
+                <div class="school__info">
+                  <div class="school__kind">
+                    Jazykova skola
+                  </div>
+                  <div class="school__location">
+                    <div class="location-icon"></div>
+                    <span class="school__location-name">Praha</span>
+                  </div>
+                  <div class="school__type">
+                    Soukroma skola
+                  </div>
+                </div>
+                <div class="like-status">
+                  <input type='checkbox'
+                         value='valuable'
+                         id="likebox-3"
+                         checked
+                  />
+                  <label for="likebox-3"></label>
+                  <span class="like-status__count">91</span>
+                </div>
+              </div>
+            </div>
+            <div class="school">
+              <div class="school__main">
+                <div class="school__img">
+                  <img src="https://placeimg.com/97/97/arch" alt="school img">
+                </div>
+                <div class="school__description">
+                  <div class="school__heading">
+                    <span class="school__title">ScioSkola - zakladni skola s.r.o</span>
+                  </div>
+                  <div class="school__info">
+                    <div class="school__kind">
+                      Zakladni skola
+                    </div>
+                    <div class="school__type">
+                      Statni skola
+                    </div>
+                  </div>
+                  <div class="school__about">Podporujeme demokratcke prostredi,
+                    kladeni otazek a odpovedi. Rozvijime umeni prezentovat sve znalosti
+                    i schopnost naslouchat drunym, diskutovat. Ucivo mame dle individualnich
+                    schopnosti a dovedosti zaku
+                  </div>
+                </div>
+              </div>
+              <div class="school__status">
+                <div class="school__info">
+                  <div class="school__kind">
+                    Jazykova skola
+                  </div>
+                  <div class="school__location">
+                    <div class="location-icon"></div>
+                    <span class="school__location-name">Praha</span>
+                  </div>
+                  <div class="school__type">
+                    Soukroma skola
+                  </div>
+                </div>
+                <div class="like-status">
+                  <input type='checkbox'
+                         value='valuable'
+                         id="likebox-4"
+                  />
+                  <label for="likebox-4"></label>
+                  <span class="like-status__count">3648</span>
+                </div>
+              </div>
+            </div>
+          </div><!--schools-->
+        </div>
+        <div class="map-box" id="map-box">
+          <div class="map-wrapper">
+            <img src="https://placeimg.com/560/690/animals">
+            <button
+              class="map-fullscreen-btn fullscreen-btn"
+              id="map-expand"
+            >
+              close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div><!--main-->
+  </div>
+</div>
+</body>
+<script src="js/less.js"></script>
+<script src="js/common.js"></script>
+</html>
