@@ -1,0 +1,125 @@
+@import '../styles/colors';
+
+.discussion__form {
+  background: #ececec;
+  border-radius: 6px;
+  border: 2px dashed @blue;
+  padding: 15px 15px 10px;
+  text-align: justify;
+  overflow: hidden;
+}
+.discussion__input {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 17px;
+  padding: 7px 10px;
+  border-radius: 5px;
+  border: 1px solid @border;
+  outline: none;
+  margin-bottom: 13px;
+  transition: .2s;
+  &:focus, &:hover {
+    border: 1px solid @blue;
+  }
+}
+.discussion__input-name {
+  width: 48%;
+}
+.discussion__input-email {
+  width: 48%;
+}
+.discussion__input-text {
+  width: 100%;
+}
+.discussion__field-checkbox {
+  display: flex;
+  align-items: center;
+  float: left;
+  cursor: pointer;
+  input[type=checkbox] {
+    display:none;
+  }
+  input[type=checkbox] + label:before {
+    cursor: pointer;
+    content: "\00a0";
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    padding: 0;
+    background: @white;
+    border: 1px solid @blue;
+    border-radius: 6px;
+    text-align: center;
+    color: @blue;
+    margin-right: 10px;
+  }
+  input[type=checkbox]:checked + label:before {
+    content: "\2713";
+    line-height: 1.2;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  span {
+    font-weight: 600;
+  }
+}
+.discussion__btn {
+  float: right;
+}
+.discussion__comments {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
+}
+.comment {
+  display: flex;
+  margin-top: 10px;
+}
+.comment__img {
+  margin: 10px 10px 0 0;
+  min-width: 60px;
+  max-width: 60px;
+  max-height: 60px;
+  img {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+}
+.comment__main {
+  display: flex;
+  flex-direction: column;
+  background: #ececec;
+  border-radius: 6px;
+  padding: 10px;
+  width: 100%;
+  font-size: 14.5px;
+}
+.comment__text {
+  font-weight: 600;
+}
+.comment__main-footer {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.comment__main-info {
+  display: flex;
+}
+.comment__main-username {
+  font-weight: 600;
+  margin-left: 15px;
+}
+.comment__main-link {
+  font-size: 15px;
+  align-self: flex-end;
+}
+
+.subcomment {
+  display: flex;
+  width: ~"calc(100% - 70px)";
+  align-self: flex-end;
+  margin-top: 5px;
+  .comment__main {
+    background: @lightBlue;
+  }
+}
