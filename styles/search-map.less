@@ -120,7 +120,6 @@
   width: 100%;
   background: @white;
   padding: 9px;
-  max-height: 100px;
   margin-bottom: 6px;
   overflow: hidden;
   &:last-child {
@@ -147,6 +146,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
   .school__info {
    display: none;
   }
@@ -167,7 +167,7 @@
 .school__owl-icon {
   display: inline-block;
   margin-left: 10px;
-  min-width: 13px;
+  min-width: 15px;
   min-height: 15px;
 }
 .school__about {
@@ -251,6 +251,72 @@
   }
   .school__kind, .school__type {
     display: none;
+  }
+}
+
+/* grid layout schools */
+.schools_grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  .school {
+    width: 32.5%;
+    flex-direction: column;
+    position: relative;
+    margin-bottom: 10px;
+  }
+  .school__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    img {
+      border-radius: 6px 0 6px 0;
+    }
+  }
+  .school__description {
+    position: relative;
+    padding-top: 80px;
+  }
+  .school__heading {
+    position: absolute;
+    top: 0;
+    left: 80px;
+    align-items: flex-start;
+  }
+  .school__title {
+    font-size: 1.2em;
+    white-space: normal;
+    max-height: 72px;
+  }
+  .school__description .school__info {
+    display: none;
+  }
+  .school__about {
+    font-size: 0.9em;
+    max-height: 55px;
+  }
+  .school__status {
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+    margin-top: 15px;
+  }
+  .school__info {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0;
+  }
+  .school__location {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    justify-content: center;
+    margin: 0;
+  }
+  .school__kind {
+    margin-bottom: 3px;
   }
 }
 
