@@ -1,10 +1,23 @@
 @import 'https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600';
 @import './colors.less';
 
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+}
+button {
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+  background: none;
+}
+input, textarea, select {
+  font-family: 'Source Sans Pro', sans-serif;
 }
 .main {
   max-width: 1175px;
@@ -17,6 +30,7 @@
   min-height: 100vh;
   background: @mainBackground;
   color: @black;
+  font-size: 1em;
 }
 .content {
   margin-top: 20px;
@@ -258,8 +272,6 @@
   background-size: cover;
 }
 .owl-icon {
-  width: 15px;
-  height: 15px;
   background: url('../images/owl.svg') no-repeat 0 0;
   background-size: cover;
 }
@@ -395,7 +407,7 @@
   background-size: 19px;
   background-repeat: no-repeat;
   background-position: center center;
-  transition: background 0.2s ease-in-out;
+  transition: background 0.15s ease-in-out;
   &:hover {
     background-color: @btnPrimaryHover;
   }
@@ -534,6 +546,9 @@
 @media (max-width: 550px) {
   .heading {
     font-size: 35px;
+  }
+  .second-heading {
+    font-size: 16px;
   }
 }
 @media (max-width: 475px) {
