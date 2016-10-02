@@ -16,6 +16,7 @@ button {
   border: 0;
   background: none;
 }
+
 input, textarea, select {
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -34,9 +35,6 @@ input, textarea, select {
 }
 .content {
   margin-top: 20px;
-}
-.content-wrapper {
-  display: flex;
 }
 .box {
   border: 1px solid @border;
@@ -194,6 +192,7 @@ input, textarea, select {
 .like-status__count {
   color: @black;
   margin-left: 4px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -212,6 +211,7 @@ input, textarea, select {
   }
 }
 .pagination__link {
+  font-size: 16px;
   color: @btnPrimary;
   border-radius: 6px;
   padding: 4px 10px;
@@ -283,6 +283,21 @@ input, textarea, select {
 }
 
 /* links and buttons */
+.btn {
+  border-radius: 6px;
+  color: @white;
+  padding: 5px 11px;
+  font-size: 14px;
+  letter-spacing: .1px;
+  transition: .2s;
+  cursor: pointer;
+}
+.btn_primary {
+  background-color: @btnPrimary;
+  &:hover, &:focus {
+    background-color: @btnPrimaryHover;
+  }
+}
 .btn_disabled {
   background: @btnDisabled !important;
   cursor: default !important;
@@ -346,16 +361,15 @@ input, textarea, select {
 .link_underline {
   text-decoration: underline;
 }
-.link_arrow-left {
-  display: flex;
-  align-items: center;
-  &:before {
-    content: '';
-    background: url('../images/arrow-left_blue.svg') no-repeat 0 0;
-    background-size: cover;
-    width: 17px;
-    height: 18px;
-    margin: 0 7px 2px 0;
+.return-btn {
+  color: @btnPrimary;
+  font-size: 1em;
+  background: url('../images/arrow-left_blue.svg') no-repeat;
+  background-size: 16px;
+  background-position: left;
+  padding-left: 20px;
+  &:hover, &:active {
+    color: @btnPrimaryHover;
   }
 }
 .edit-btn {
@@ -377,21 +391,16 @@ input, textarea, select {
   }
 }
 .add-btn {
-  outline: 0;
-  border: 0;
-  border-radius: 6px;
-  background-color: @btnPrimary;
-  cursor: pointer;
-  color: white;
-  padding: 6px 25px 6px 32px;
   background-image: url('../images/plus.svg');
   background-repeat: no-repeat;
-  background-position: 6px 1px;
-  background-size: 24px;
-  transition: .2s;
-  &:hover, &:focus {
-    background-color: @btnPrimaryHover;
-  }
+  padding-right: 20px;
+  padding-left: 34px;
+  -webkit-background-origin: content-box;
+  background-origin: content-box;
+  background-position: -24px center;
+  background-size: 22px;
+  outline: 0;
+  border: 0;
 }
 .fullscreen-btn {
   cursor: pointer;

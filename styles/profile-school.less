@@ -1,52 +1,18 @@
 @import './colors.less';
 
+.profile-school__content {
+  overflow: hidden;
+  font-size: 1em;
+}
 .profile-nav {
   display: inline-block;
   margin-top: 25px;
   list-style: none;
   font-weight: 600;
-}
-.profile-nav_fixed {
   position: fixed;
-  top: 5px;
 }
-.profile-nav_fixed + .profile-info {
-  margin-left: 145px;
-}
-
 .profile-nav__item {
   margin-bottom: 10px;
-  &:nth-child(1) {
-    .profile-nav__link:before {
-      background: @slateBlue;
-    }
-  }
-  &:nth-child(2) {
-    .profile-nav__link:before {
-      background: @sienna;
-    }
-  }
-  &:nth-child(3) {
-    .profile-nav__link:before {
-      background: @goldenrod;
-    }
-  }
-  &:nth-child(4) {
-    .profile-nav__link:before {
-      background: @mistyRose;
-    }
-  }
-  &:nth-child(5) {
-    .profile-nav__link:before {
-      background: @paleGreen;
-    }
-  }
-  &:nth-child(6) {
-    .profile-nav__link:before {
-      background: @azure;
-    }
-  }
-
 }
 .profile-nav__link {
   display: flex;
@@ -54,9 +20,6 @@
   font-size: 19px;
   color: @black;
   text-decoration: none;
-  &_active {
-    color: @blue;
-  }
   &:before {
     content: '';
     display: inline-block;
@@ -67,18 +30,78 @@
     border-radius: 4px;
   }
 }
+.nav__item_info {
+  .profile-nav__link {
+    &_active {
+      color: @slateBlue;
+    }
+    &:before {
+      background: @slateBlue;
+    }
+  }
+}
+.nav__item_stats {
+  .profile-nav__link {
+    &_active {
+      color: @sienna;
+    }
+    &:before {
+      background: @sienna;
+    }
+  }
+}
+.nav__item_events {
+  .profile-nav__link {
+    &_active {
+      color: @goldenrod;
+    }
+    &:before {
+      background: @goldenrod;
+    }
+  }
+}
+.nav__item_gallery {
+  .profile-nav__link {
+    &_active {
+      color: @mistyRose;
+    }
+    &:before {
+      background: @mistyRose;
+    }
+  }
+}
+.nav__item_map {
+  .profile-nav__link {
+    &_active {
+      color: @paleGreen;
+    }
+    &:before {
+      background: @paleGreen;
+    }
+  }
+}
+.nav__item_discussions {
+  .profile-nav__link {
+    &_active {
+      color: @azure;
+    }
+    &:before {
+      background: @azure;
+    }
+  }
+}
 
 .profile-info {
   display: inline-block;
+  float: right;
   vertical-align: top;
-  width: 100%;
-  margin-left: 25px;
+  width: ~"calc(100% - 145px)";
 }
 .school-info {
   display: flex;
   border-radius: 6px;
-  border: 1px solid @greySecondary;
-  background: white;
+  border: 1px solid @border;
+  background: @white;
   margin-top: 10px;
 }
 .school-info__aside {
@@ -86,8 +109,8 @@
 }
 .school-info__photo {
   position: relative;
-  border-right: 1px solid @greySecondary;
-  border-bottom: 1px solid @greySecondary;
+  border-right: 1px solid @border;
+  border-bottom: 1px solid @border;
   max-width: 235px;
   min-width: 235px;
   height: 235px;
@@ -106,7 +129,7 @@
   margin-top: 10px;
   padding: 7px 10px 0;
   font-size: 15px;
-  border-right: 1px solid @greySecondary;
+  border-right: 1px solid @border;
 }
 
 .contacts__heading {
@@ -136,7 +159,7 @@
   }
 }
 .school-info__title {
-  font-size: 35px;
+  font-size: 2.188em;
   margin-right: 5px;
 }
 .school-info__light {
@@ -146,10 +169,10 @@
 .school-info__status {
   padding-right: 5px;
   min-width: 48%;
-  font-size: 18px;
+  font-size: 1.125em;
 }
 .school-info__status-heading {
-  font-size: 20px;
+  font-size: 1.250em;
   color: #b16153;
   margin-bottom: 10px;
 }
@@ -165,7 +188,7 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  font-size: 18.5px;
+  font-size: 1.156em;
 }
 .light-pluses__item {
   display: flex;
@@ -196,7 +219,7 @@
   margin-top: 20px;
 }
 .profile-heading {
-  font-size: 25px;
+  font-size: 1.563em;
   &:after {
     content: '';
     display: block;
@@ -242,16 +265,16 @@
   width: 27.5%;
 }
 .school-stats__heading {
-  font-size: 25px;
+  font-size: 1.563em;
   margin-bottom: 10px;
 }
 .school-stats__graph {
   width: 100%;
   height: 160px; /*TODO REMOVE THIS */
-  border: 1px solid @greySecondary;
+  border: 1px solid @border;
   border-radius: 6px;
   padding: 10px;
-  background: white;
+  background: @white;
 }
 
 /* school-events */
@@ -260,9 +283,9 @@
 }
 .school-event {
   display: flex;
-  border: 1px solid @greySecondary;
+  border: 1px solid @border;
   border-radius: 6px;
-  background: white;
+  background: @white;
   padding: 14px;
   margin-bottom: 15px;
   &:last-child {
@@ -276,7 +299,7 @@
   img {
     width: 100%;
     height: 100%;
-    border: 1px solid @grey4;
+    border: 1px solid @borderDark;
     border-radius: 6px;
   }
 }
@@ -284,15 +307,15 @@
   margin: 5px 0 0 15px;
 }
 .school-event__title {
-  font-size: 31px;
+  font-size: 1.938em;
   font-weight: 600;
 }
 .school-event__date {
-  font-size: 20px;
+  font-size: 1.250em;
   font-weight: 600;
 }
 .school-event__description {
-  font-size: 18px;
+  font-size: 1.125em;
   margin-top: 11px;
   max-width: 660px;
 }
@@ -320,7 +343,7 @@
 /* school-map */
 .school-map__box {
   margin-top: 20px;
-  border: 1px solid @greySecondary;
+  border: 1px solid @border;
   border-radius: 6px;
   width: 100%;
   height: 345px;
@@ -345,11 +368,10 @@
   overflow: hidden;
 }
 .discussion__input {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size: 17px;
+  font-size: 1.063em;
   padding: 7px 10px;
   border-radius: 5px;
-  border: 1px solid @greySecondary;
+  border: 1px solid @border;
   outline: none;
   margin-bottom: 13px;
   transition: .2s;
@@ -430,9 +452,6 @@
   width: 100%;
   font-size: 14.5px;
 }
-.comment__text {
-  font-weight: 600;
-}
 .comment__main-footer {
   margin-top: 10px;
   display: flex;
@@ -468,11 +487,10 @@
   opacity: 0.8;
 }
 
-
 /* media */
 @media (max-width: 1024px) {
-  .school-info__title {
-    font-size: 30px;
+  .profile-school__content {
+    font-size: 0.9em;
   }
   .school-info__light {
     flex-direction: column;
@@ -480,25 +498,15 @@
   .light-pluses {
     margin-top: 20px;
   }
-  .school-stats__heading {
-    font-size: 21px;
-  }
-  .school-event__title {
-    font-size: 26px;
-  }
-  .school-event__date {
-    font-size: 18px;
-  }
-  .school-event__description {
-    font-size: 17px;
-  }
 }
 @media (max-width: 900px) {
   .profile-school__content {
+    display: flex;
     flex-direction: column;
   }
   .profile-nav {
     display: flex;
+    position: static;
     align-self: center;
     margin: 0 0 15px;
   }
@@ -518,43 +526,22 @@
   }
   .profile-info {
     margin-left: 0;
+    width: 100%;
   }
   .school-stats__item {
     width: 31.5%;
   }
 }
 @media (max-width: 768px) {
-  .school-info__title {
-    font-size: 26px;
-  }
-  .school-info__status {
-    font-size: 17px;
-  }
-  .school-info__status-heading {
-    font-size: 18px;
-  }
-  .light-pluses {
-    font-size: 16.5px;
-  }
-  .school-info__description {
-    font-size: 16px;
-  }
-  .school-stats__heading{
-    font-size: 19px;
+  .profile-school__content {
+    font-size: 0.85em;
   }
   .school-event__img {
     min-width: 110px;
     max-width: 110px;
     height: 110px;
   }
-  .school-event__title {
-    font-size: 23px;
-  }
-  .school-event__date {
-    font-size: 17px;
-  }
   .school-event__description {
-    font-size: 16px;
     margin-top: 7px;
   }
   .school-gallery__photo {
@@ -593,12 +580,8 @@
     border-right: 0;
   }
 
-  .contacts__heading {
-    font-size: 18px;
-  }
   .contacts__item {
     flex-direction: row;
-    font-size: 15.5px;
     letter-spacing: 0.3px;
   }
   .contacts__title {
@@ -609,9 +592,6 @@
     top: 10px;
     left: 250px;
     padding-right: 5px;
-  }
-  .school-info__title {
-    font-size: 24px;
   }
   .school-info__status {
     position: absolute;
@@ -627,6 +607,12 @@
 
 }
 @media (max-width: 600px) {
+  .school-info__title {
+    font-size: 1.8em;
+  }
+  .school-info__description {
+    font-size: 15px;
+  }
   .school-gallery__photo {
     width: 48.5%;
     &:nth-child(3n) {
@@ -663,34 +649,18 @@
   .school-map__box {
     height: 300px;
   }
-  .school-info__title {
-    font-size: 20px;
-  }
-  .school-info__status-heading {
-    font-size: 17px;
-  }
   .school-info__status {
     top: 105px;
     left: 190px;
-    font-size: 16px;
-  }
-  .light-pluses {
-    font-size: 16px;
-  }
-  .school-event__title {
-    font-size: 22px;
-  }
-  .school-event__date {
-    font-size: 16px;
-  }
-  .school-event__description {
-    font-size: 15px;
   }
   .subcomment {
     width: ~"calc(100% - 30px)";
   }
 }
 @media (max-width: 500px) {
+  .profile-school__content {
+    font-size: 0.8em;
+  }
   .school-info__status {
     position: static;
     margin-bottom: 15px;
@@ -704,9 +674,6 @@
     flex-direction: column;
     left: 160px;
   }
-  .school-info__title {
-    margin-bottom: 20px;
-  }
   .school-info__main {
     margin-top: 150px;
   }
@@ -718,9 +685,6 @@
   .profile-nav__item {
     margin-right: 0;
   }
-  .profile-heading {
-    font-size: 22px;
-  }
   .school-gallery__photo {
     width: 100%;
     &:nth-child(n) {
@@ -729,9 +693,6 @@
   }
   .school-discussion__form {
     padding: 10px 10px 5px;
-  }
-  .school-event__title {
-    font-size: 19px;
   }
 }
 @media (max-width: 425px) {
@@ -769,7 +730,7 @@
   .discussion__btn {
     width: 100%;
     margin-top: 10px;
-    background-position: 43% center;
+    background-position: 37% center;
   }
   .light-pluses__item {
     width: 100%;
